@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Local Community Event Portal</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f2f2f2;
+      }
+
+      header {
+        color: rgb(14, 13, 13);
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav {
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #1a1919;
+
+        text-decoration: none;
+        padding: 30px;
+        margin: 15px;
+      }
+
+      section {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      #welcomeBanner {
+        background-color: lightblue;
+        padding: 15px;
+      }
+
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+
+      table {
+        width: 100%;
+        text-align: center;
+      }
+
+      .eventImage {
+        border: 3px solid black;
+        width: 200px;
+        height: 140px;
+      }
+
+      form input,
+      form select,
+      form textarea {
+        width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      form button {
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+
+      footer {
+        color: rgb(32, 31, 31);
+        text-align: center;
+        padding: 12px;
+      }
+
+      #videoMessage {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Task 1 -->
+    <h2>Task 1: HTML5 Base Template</h2>
+    <!-- Header -->
+    <header>
+      <h1>Local Community Event Portal</h1>
+    </header>
+
+    <!-- Task 2 -->
+    <h2>Task 2: Navigation and Linking</h2>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#home">Home</a>
+
+      <a href="#events">Events</a>
+
+      <a href="#contact">Contact</a>
+
+      <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- Task 3 -->
+      <h2>Task 3: Welcome Message with Styling and ID/Class</h2>
+
+      <!-- Home Section -->
+      <section id="home">
+        <h2>Welcome Section</h2>
+
+        <div id="welcomeBanner">
+          Welcome Back User!
+
+          <span style="color: red; font-weight: bold">
+            Special Offer: Register today and get free snacks!
+          </span>
+        </div>
+
+        <p class="highlight">
+          Community events help people connect and enjoy together.
+        </p>
+      </section>
+
+      <!-- Task 4 -->
+      <h2>Task 4: Image Gallery for Community Events</h2>
+
+      <!-- Events Section -->
+      <section id="events">
+        <h2>Community Event Gallery</h2>
+
+        <table border="1" cellspacing="10">
+          <tr>
+            <td>
+              <img
+                src="music.jpg"
+                alt="Music Event"
+                title="Music Event"
+                class="eventImage"
+              />
+
+              <p>Music Festival</p>
+            </td>
+
+            <td>
+              <img
+                src="Food Carnival.jpg"
+                alt="Food Festival"
+                title="Food Festival"
+                class="eventImage"
+              />
+
+              <p>Food Carnival</p>
+            </td>
+
+            <td>
+              <img
+                src="Sports Day.jpg"
+                alt="Sports Event"
+                title="Sports Event"
+                class="eventImage"
+              />
+
+              <p>Sports Day</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img
+                src="Dance Club.jpg"
+                alt="Dance Club Event"
+                title="Dance Club Event"
+                class="eventImage"
+              />
+
+              <p>Dance Program</p>
+            </td>
+
+            <td>
+              <img
+                src="Art Exhibition.jpg"
+                alt="Art Exhibition"
+                title="Art Exhibition"
+                class="eventImage"
+              />
+
+              <p>Art Exhibition</p>
+            </td>
+
+            <td>
+              <img
+                src="Tech Meetup.jpg"
+                alt="Tech Event"
+                title="Tech Event"
+                class="eventImage"
+              />
+
+              <p>Tech Meetup</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Task 5 -->
+      <h2>Task 5: Event Registration Form</h2>
+
+      <!-- Registration Form -->
+      <section>
+        <h2>Event Registration Form</h2>
+
+        <form id="eventForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <input type="date" id="date" required />
+
+          <select id="eventType" onchange="showFee()" required>
+            <option value="">Select Event</option>
+
+            <option value="Music">Music Event</option>
+
+            <option value="Food">Food Festival</option>
+
+            <option value="Sports">Sports Day</option>
+          </select>
+
+          <p id="eventFee"></p>
+
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Enter message"
+            required
+            onkeyup="countCharacters()"
+          ></textarea>
+
+          <p>
+            Character Count:
+            <span id="charCount">0</span>
+          </p>
+
+          <input
+            type="text"
+            id="phone"
+            placeholder="Enter phone number"
+            onblur="validatePhone()"
+          />
+
+          <button type="submit" onclick="showConfirmation()">Register</button>
+
+          <output id="outputMessage"></output>
+        </form>
+      </section>
+
+      <!-- Task 6 -->
+      <h2>Task 6: Event Feedback with Events Handling</h2>
+
+      <!-- Event Handling -->
+      <section>
+        <h2>Image Double Click Event</h2>
+
+        <img
+          src="Zoom.jpg"
+          id="zoomImage"
+          ondblclick="enlargeImage()"
+          style="border: 3px solid black; cursor: pointer"
+          alt="Community Image"
+        />
+
+        <p>Double click image to enlarge</p>
+      </section>
+
+      <!-- Task 7 -->
+      <h2>Task 7: Video Invite with Media Events</h2>
+
+      <!-- Video Section -->
+      <section>
+        <h2>Event Promo Video</h2>
+
+        <video width="400" controls oncanplay="videoReady()">
+          <source src="eventvideo.mp4" type="video/mp4" />
+
+          Your browser does not support video.
+        </video>
+
+        <p id="videoMessage"></p>
+      </section>
+
+      <!-- Task 8 -->
+      <h2>Task 8: Saving User Preferences</h2>
+
+      <center>
+        <button onclick="clearPreferences()">Clear Preferences</button>
+      </center>
+
+      <!-- Task 9 -->
+      <h2>Task 9: Geolocation for Event Mapping</h2>
+
+      <!-- Geolocation -->
+      <section>
+        <h2>Find Nearby Events</h2>
+
+        <button onclick="findLocation()">Find Nearby Events</button>
+
+        <p id="locationResult"></p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact Section</h2>
+      </section>
+
+      <!-- Task 10 -->
+      <h2>Task 10: Debugging with Chrome DevTools</h2>
+
+      <p>Check Console tab and DevTools for debugging.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Local Community Event Portal</p>
+    </footer>
+
+    <script>
+      console.log("Portal Loaded Successfully");
+
+      // Fee Display
+      function showFee() {
+        let eventType = document.getElementById("eventType").value;
+
+        let feeText = "";
+
+        if (eventType === "Music") {
+          feeText = "Event Fee: ₹200";
+        } else if (eventType === "Food") {
+          feeText = "Event Fee: ₹150";
+        } else if (eventType === "Sports") {
+          feeText = "Event Fee: ₹100";
+        }
+
+        document.getElementById("eventFee").innerHTML = feeText;
+
+        localStorage.setItem("preferredEvent", eventType);
+      }
+
+      // Confirmation
+      function showConfirmation() {
+        document.getElementById("outputMessage").value =
+          "Registration Submitted Successfully!";
+      }
+
+      // Phone Validation
+      function validatePhone() {
+        let phone = document.getElementById("phone").value;
+
+        if (phone.length !== 10) {
+          alert("Phone number must contain 10 digits");
+        }
+      }
+
+      // Character Count
+      function countCharacters() {
+        let textLength = document.getElementById("message").value.length;
+
+        document.getElementById("charCount").innerHTML = textLength;
+      }
+
+      // Image Enlarge
+      function enlargeImage() {
+        let image = document.getElementById("zoomImage");
+
+        image.style.width = "450px";
+
+        image.style.height = "300px";
+      }
+
+      // Video Message
+      function videoReady() {
+        document.getElementById("videoMessage").innerHTML =
+          "Video ready to play";
+      }
+
+      // Load Saved Preference
+      window.onload = function () {
+        let savedEvent = localStorage.getItem("preferredEvent");
+
+        if (savedEvent) {
+          document.getElementById("eventType").value = savedEvent;
+
+          showFee();
+        }
+      };
+
+      // Clear Storage
+      function clearPreferences() {
+        localStorage.clear();
+
+        sessionStorage.clear();
+
+        alert("Preferences Cleared");
+      }
+
+      // Geolocation
+      function findLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            showPosition,
+
+            showError,
+
+            {
+              enableHighAccuracy: true,
+              timeout: 5000,
+            },
+          );
+        } else {
+          alert("Geolocation not supported");
+        }
+      }
+
+      function showPosition(position) {
+        document.getElementById("locationResult").innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+
+      function showError(error) {
+        if (error.code === 1) {
+          alert("Permission Denied");
+        } else if (error.code === 3) {
+          alert("Request Timeout");
+        } else {
+          alert("Location Error");
+        }
+      }
+
+      // Warn Before Leaving
+      window.onbeforeunload = function () {
+        return "Your form is not fully submitted.";
+      };
+    </script>
+  </body>
+</html>

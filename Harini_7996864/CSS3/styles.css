@@ -1,0 +1,219 @@
+/* Universal Selector */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+}
+/* Heading Style */
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #222;
+  background-color: #ecaae6;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 14px;
+}
+/* Task Container */
+
+.taskBox {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+
+/* Button Style */
+
+.mainBtn {
+  background-color: #1f56d6;
+  color: white;
+  padding: 10px 18px;
+  margin-top: 10px;
+}
+
+/* Comment Card */
+
+.commentCard {
+  border: 2px solid #333;
+  padding: 20px;
+}
+
+/* ID Selector */
+
+#mainHeader {
+  background-color: #3248c7;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.colorSection {
+  background-image: url("party.jpg");
+  background-size: cover;
+  color: white;
+  min-height: 30vh;
+}
+/* Class Selector */
+
+.eventCard {
+  border: 2px solid #4d4ddb;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: white;
+}
+
+/* Grouping Selector */
+
+h3,
+p {
+  margin-bottom: 10px;
+}
+
+/* Gradient Heading */
+
+.gradientHeading {
+  background: linear-gradient(to right, #ff9800, #ff5722);
+  color: white;
+  padding: 10px;
+}
+
+/* Typography */
+
+.fontHead {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.fontPara {
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* Navigation Menu */
+
+.navMenu {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.navMenu li {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.navMenu a:link {
+  color: blue;
+}
+
+.navMenu a:hover {
+  color: red;
+}
+
+.navMenu a:active {
+  color: green;
+}
+
+.navMenu a:visited {
+  color: purple;
+}
+
+/* Table Styling */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 12px;
+}
+
+th {
+  background-color: #3248c7;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+/* Box Model */
+
+.boxCard {
+  border: 3px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  outline: 3px solid orange;
+}
+
+.outlineInput {
+  padding: 10px;
+  outline: 2px solid blue;
+}
+
+.hiddenBox {
+  visibility: hidden;
+}
+
+.noneBox {
+  display: none;
+}
+
+/* Multi Column */
+
+.newsSection {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  text-align: justify;
+}
+
+/* Responsive Section */
+
+.responsiveBox img {
+  width: 40%;
+  margin-top: 10px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .navMenu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .responsiveBox img {
+    width: 100%;
+  }
+
+  .newsSection {
+    column-count: 1;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

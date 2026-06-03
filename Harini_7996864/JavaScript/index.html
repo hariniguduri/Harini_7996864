@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Local Community Event Portal</h1>
+
+    <!-- Task 1 -->
+    <section>
+      <h2>Task 1 - JavaScript Basics</h2>
+      <p>Check console message and page load alert.</p>
+    </section>
+
+    <!-- Task 2 -->
+    <section>
+      <h2>Task 2 - Syntax, Data Types and Operators</h2>
+
+      <div id="eventInfo"></div>
+    </section>
+
+    <!-- Task 3 -->
+    <section>
+      <h2>Task 3 - Conditionals, Loops and Error Handling</h2>
+
+      <div id="validEvents"></div>
+    </section>
+
+    <!-- Task 4 -->
+    <section>
+      <h2>Task 4 - Functions, Scope, Closures</h2>
+
+      <button onclick="registerUser('Music Night')">
+        Register Music Event
+      </button>
+      <button onclick="showMusicEvents()">Filter Music Events</button>
+
+      <p id="totalCount"></p>
+    </section>
+
+    <!-- Task 5 -->
+    <section>
+      <h2>Task 5 - Objects and Prototypes</h2>
+
+      <div id="objectData"></div>
+    </section>
+
+    <!-- Task 6 -->
+    <section>
+      <h2>Task 6 - Arrays and Methods</h2>
+
+      <div id="arrayData"></div>
+    </section>
+
+    <!-- Task 7 -->
+    <section>
+      <h2>Task 7 - DOM Manipulation</h2>
+
+      <div id="eventContainer"></div>
+    </section>
+
+    <!-- Task 8 -->
+    <section>
+      <h2>Task 8 - Event Handling</h2>
+
+      <label>Select Category:</label>
+
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Music">Music</option>
+        <option value="Workshop">Workshop</option>
+      </select>
+
+      <br /><br />
+
+      <input type="text" id="searchBox" placeholder="Search event by name" />
+    </section>
+
+    <!-- Task 9 -->
+    <section>
+      <h2>Task 9 - Async JS, Promises, Async Await</h2>
+
+      <button onclick="getEvents()">Fetch Events</button>
+
+      <p id="loading"></p>
+
+      <div id="apiData"></div>
+    </section>
+
+    <!-- Task 10 -->
+    <section>
+      <h2>Task 10 - Modern JavaScript Features</h2>
+
+      <div id="modernData"></div>
+    </section>
+
+    <!-- Task 11 -->
+    <section>
+      <h2>Task 11 - Working with Forms</h2>
+
+      <form id="registerForm">
+        <input type="text" name="userName" placeholder="Enter name" />
+        <span id="nameError" class="error"></span>
+
+        <br /><br />
+
+        <input type="email" name="userEmail" placeholder="Enter email" />
+        <span id="emailError" class="error"></span>
+
+        <br /><br />
+
+        <select name="userEvent">
+          <option value="">Select Event</option>
+          <option value="Music Night">Music Night</option>
+          <option value="Baking Workshop">Baking Workshop</option>
+        </select>
+
+        <span id="eventError" class="error"></span>
+
+        <br /><br />
+
+        <button type="submit" id="registerBtn">Register</button>
+      </form>
+
+      <p id="formMessage"></p>
+    </section>
+
+    <!-- Task 12 -->
+    <section>
+      <h2>Task 12 - AJAX and Fetch API</h2>
+
+      <button onclick="sendData()">Send Registration</button>
+
+      <p id="serverMessage"></p>
+    </section>
+
+    <!-- Task 13 -->
+    <section>
+      <h2>Task 13 - Debugging and Testing</h2>
+
+      <p>Open Console and Network tab to check logs and fetch requests.</p>
+    </section>
+
+    <!-- Task 14 -->
+    <section>
+      <h2>Task 14 - jQuery and Frameworks</h2>
+
+      <button id="hideBtn">Fade Out Events</button>
+      <button id="showBtn">Fade In Events</button>
+
+      <div class="jqCard">jQuery Event Card</div>
+
+      <p>
+        React or Vue helps in better component management and faster UI updates.
+      </p>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
